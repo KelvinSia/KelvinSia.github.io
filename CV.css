@@ -33,6 +33,7 @@ a{
 
 html{
     background-color: var(--PastelDarkPurple);
+    zoom: 100%;
 }
 
 body{
