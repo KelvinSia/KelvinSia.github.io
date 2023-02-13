@@ -203,23 +203,26 @@ ul{
 }
 
 .box-doko{
+    overflow: hidden;
     border: 5px solid white;
     border-radius: 1rem;
+    margin: auto;
     width: 600px;
     height: 400px;
-    float: left;
-    margin-right: 2%;
-    overflow: hidden;
+}
+
+.base-doko{
+    width: 80%;
+    margin: auto;
+}
+
+.size-doko{
+    width: inherit;
+    height: inherit;
 }
 
 .margin-doko{
-    width: 80%;
-    position: relative;
-    left: 4%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2rem;
-    margin-bottom: 28rem;
+    margin: auto;
 }
 
 .box-backgroundmini{
