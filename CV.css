@@ -33,12 +33,15 @@ a{
 
 html{
     background-color: var(--PastelDarkPurple);
-    zoom: 100%;
+    max-zoom: 100%;
+    padding: 5rem;
 }
 
 body{
     background-color: var(--PastelLightPurple);
-    margin: 5rem;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
     padding-bottom: 4rem;
     padding-right: 1rem;
     border-radius: 2rem;
