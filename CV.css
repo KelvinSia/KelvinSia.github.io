@@ -56,7 +56,7 @@ table{
     width: auto;
 }
 
-@media (max-width: 1600px) {
+@media (max-width: 1768px) {
     .all-content{
         zoom: 68%;
     }
