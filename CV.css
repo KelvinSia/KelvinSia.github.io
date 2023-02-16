@@ -33,7 +33,6 @@ a{
 
 html{
     background-color: var(--PastelDarkPurple);
-    max-zoom: 100%;
     padding: 5rem;
 }
 
@@ -51,6 +50,16 @@ body{
 
 table{
     max-width: 100%;
+}
+
+.all-content{
+    width: auto;
+}
+
+@media (max-width: 1366px) {
+    .all-content{
+        zoom: 70%;
+    }
 }
 
 .title{
@@ -247,10 +256,10 @@ ul{
     position: relative;
     transition: all 0.3s ease;
     box-shadow: -10px 10px 0px var(--PastelLightPurple);
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
-    margin-right: 1rem;
-    margin-left: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2.5rem;
+    margin-right: 2.5rem;
+    margin-left: 3rem;
 }
 
 .minicontent{
