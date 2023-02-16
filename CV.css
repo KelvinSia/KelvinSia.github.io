@@ -44,7 +44,7 @@ body{
     padding-bottom: 4rem;
     padding-right: 1rem;
     border-radius: 2rem;
-    max-width: 1920px;
+    max-width: 1600px;
     min-width: 800px;
 }
 
@@ -56,9 +56,9 @@ table{
     width: auto;
 }
 
-@media (max-width: 1366px) {
+@media (max-width: 1600px) {
     .all-content{
-        zoom: 70%;
+        zoom: 68%;
     }
 }
 
