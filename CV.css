@@ -56,9 +56,9 @@ table{
     width: auto;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1600px) {
     .all-content{
-        zoom: 68%;
+        zoom: 80%;
     }
 }
 
