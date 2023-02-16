@@ -27,6 +27,13 @@
     src: url(Font/DotGothic16-Regular.ttf);
 }
 
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #fff; 
+        color: #000; 
+      }
+}
+
 a{
     text-decoration: none;
 }
