@@ -1,14 +1,10 @@
 :root{ 
-    --PastelDarkPurple:#c2a7d8;
-    --PastelLightPurple:#e4d2f3;
-    --PastelPopPurple:#bf66e9;
-    --PastelPopPink:#e956e1;
-    --PastelLightBlue:#cdf0fd;
-    --PastelBlue:#229ad1;
-    --PastelAlphaBlue:#229ad148;
-    --PastelAlphaRed:#d1222248;
-    --PastelGreen:#1C9EBE;
-    --PastelRed:#f36060;
+    --PastelDarkPurple:#1c191b;
+    --PastelLightPurple:#242124;
+    --PastelPopPink:#b958cc;
+    --PastelLightBlue:#1d3a47;
+    --PastelGreen:#1c7383;
+    --PastelRed:#dd5050;
     --PastelWhite: #ffffff;
 } 
 
@@ -67,20 +63,18 @@ table{
 }
 
 .hello{
-    background-color: var(--PastelWhite);
     width: fit-content;
     height: 3rem;
     float: left;
     margin-top: 3rem;
     border-radius: 1rem;
-    padding: 0.3rem;
 }
 
 .hello-text{
     font-weight: normal;
     text-align:  left;
     font-family: 'Pixel-Font';
-    color: var(--PastelPopPink);
+    color: var(--PastelWhite);
     font-size: 3.5rem;
     text-align: center;
     margin-top: -0.2rem;
@@ -90,7 +84,7 @@ h1{
     font-weight: normal;
     text-align:  left;
     font-family: 'Pixel-Font';
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: var(--PastelPopPink);
     margin-top: 7rem;
 }
@@ -99,8 +93,9 @@ h2{
     font-weight: normal;
     font-family: 'Pixel-Font';
     font-size: 2rem;
-    color: var(--PastelPopPurple);
+    color: var(--PastelWhite);
     margin-left: 1%;
+    margin-right: 4%;
 }
 
 h3{
@@ -119,8 +114,8 @@ h4{
     font-weight: normal;
     text-align: center;
     font-family: 'Pixel-Font';
-    font-size: 2rem;
-    color: var(--PastelBlue);
+    font-size: 1.8rem;
+    color: var(--PastelWhite);
 }
 
 h5{
@@ -165,6 +160,14 @@ h9{
     color: var(--PastelGreen) ;
 }
 
+h10{
+    font-weight: normal;
+    text-align: center;
+    font-family: 'Pixel-Font';
+    font-size: 1.5rem;
+    margin: 0.5rem;
+}
+
 ul{
     color: var(--PastelGreen) ;
     font-size: 2rem;
@@ -175,12 +178,11 @@ ul{
 }
 
 .box{
-    background-color: var(--PastelLightBlue);
+    background-color: var(--PastelGreen);
     width: 80%;
     margin: auto;
     padding: 0.5rem;
     border-radius: 1rem;
-    box-shadow: 10px -10px 0px var(--PastelWhite);
 }
 
 .box-end{
@@ -244,7 +246,7 @@ ul{
     height: auto;
     margin: auto;
     border-radius: 1rem;
-    box-shadow: -10px 10px 0px var(--PastelAlphaBlue);
+    box-shadow: -10px 10px 0px var(--PastelGreen);
     overflow: hidden;
 }
 
@@ -295,7 +297,7 @@ ul{
     position: relative;
     overflow: hidden;
     z-index: 0;
-    box-shadow: -10px 10px 0px var(--PastelAlphaBlue);
+    box-shadow: -10px 10px 0px var(--PastelGreen);
 }
 
 .box-content{
@@ -352,7 +354,7 @@ ul{
     float: right;
     margin-top: 80px;
     border-radius: 4rem;
-    margin-right: 3px;
+    margin-right: 10px;
 }
 
 .margin-icon{
@@ -371,5 +373,56 @@ ul{
 .custom-line{
     width: 90%;
     height: 5px;
-    border: 5px dotted white;
+    border: 5px dotted rgb(54, 45, 56);
+}
+
+.roles-box{
+    width: 80%;
+    height: auto;
+    margin: auto;
+    border-radius: 2rem;
+    position: relative;
+    padding-bottom: 2rem;
+}
+
+.roles-lining{
+    position: absolute;
+    top: 4.8rem;
+    left: 6rem;
+    background-color: var(--PastelWhite);
+    width: 4px;
+    height: 75px;
+    float: left;
+}
+
+.roles-boxlining{
+    position: absolute;
+    top: 10rem;
+    left: 6rem;
+    background-color: var(--PastelWhite);
+    width: 4px;
+    height: 4px;
+    float: left;
+}
+
+h11{
+    font-weight: normal;
+    text-align: center;
+    font-family: 'Pixel-Font';
+    margin-left: 5rem;
+    font-size: 3rem;
+    color: var(--PastelRed);
+}
+
+h12{
+    position: relative;
+    top: 1.5rem;
+    left: 8rem;
+    width: 80%;
+    margin: auto;
+    font-weight: normal;
+    text-align: center;
+    font-family: 'Pixel-Font';
+    font-size: 1.8rem;
+    color: var(--PastelWhite);
 }
