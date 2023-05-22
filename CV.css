@@ -52,9 +52,9 @@ table{
     width: auto;
 }
 
-@media (max-width: 1600px) {
+@media (max-width: 1920px) {
     .all-content{
-        zoom: 70%;
+        zoom: 100%;
     }
 }
 
@@ -425,4 +425,31 @@ h12{
     font-family: 'Pixel-Font';
     font-size: 1.8rem;
     color: var(--PastelWhite);
+}
+
+.clickme-button{
+    position: relative;
+    bottom: 5px;
+    left: 10px;
+    padding: 0.3rem;
+    background-color: var(--PastelWhite);
+    border-radius: 1rem;
+    margin: auto;
+    font-size: 1.5rem;
+    color: black;
+}
+
+.arc-box{
+    margin: auto;
+    width: 80%;
+    border-radius: 1rem;
+    border: 0.3rem solid var(--PastelGreen);
+    overflow: hidden;
+}
+
+.arc-content{
+    z-index: 1;
+    width: 100%;
+    border-radius: 1rem;
+    margin: auto;
 }
