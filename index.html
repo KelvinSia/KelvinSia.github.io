@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title>Pew</title>
     <link rel="stylesheet" href="CV.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <div class="all-content">
@@ -22,7 +23,7 @@
         <br><br><br>
         <hr class="custom-line">
         <br><br>
-        <h5>-Main Projects-</h5>
+        <h5 id="role-id">-Main Projects-</h5>
         <div class="box-background">
             <div><div class="box-project"><h3>Seven Arc Chronicles</h3>
                 <br>
@@ -46,16 +47,32 @@
                 <div class="roles-boxlining"></div>
                 <h11>Roles - 2021</h11>
                 <br>
-                <h12>My Roles in Seven Arc Chronicles is to create a fun exploration fantasy world! and <br>create concepts on characters, worldbuilding and gameplay. I also <br>help out on Implementing maps into Unity.</h12>
+                <h12>My Roles in Seven Arc Chronicles is to create a fun exploration fantasy world! and create <br>concepts on characters, worldbuilding and gameplay. I also help out <br>on Implementing maps into Unity.</h12>
             </div>
-            <br><br><br>
-            <div><h11>Maps -</h11><a href="https://drive.google.com/file/d/11eL_81jHReNsUBzHXC6gpbJRvpLZ0x-_/view?usp=sharing" target="_blank" class="clickme-button">Click Me To View Full Map!</a></div>
-            <br>
-            <div class="arc-box"><img src="Image/Arc_Preview.jpg" alt="Preview Map" class="arc-content"></div>
-            <br>
-            <div><h11>Slimes -</h11></div>
+            <br><br><br><br>
+            <div class="bar-expandable" onclick="toggleContent()" id="no-select"><div id="toggleText" class="text-expandable"> --- Click For More Content --- </div></div>
+            <div class="content-expandable" id="myContent-expandable">
+                <br>
+                <div id="map-id"><h11>Maps -</h11></div>
+                <br>
+                <div class="arc-box"><img src="Image/Arc_Preview.jpg" alt="Preview Map" class="arc-content"/></div>
+                <br><br>
+                <div class="clickme-button"><a href="Image/Arc_Worldmap.jpg" target="_blank"><div class="clickme-text"> Click Me To View Full Map </div></a></div>
+                <br>
+                <div><h11>Slimess -</h11></div>
+                <br>
+                <div class="Slime-box">
+                    <img onclick="left()" id="left-button" src="Image/PArrow.png" alt="Left-Button">
+                    <img id="slime-content" src="Image/Slimess/Slime_Pew_1.jpg" alt="Slimess">
+                    <img onclick="right()" id="right-button" src="Image/PArrow.png" alt="Right-Button">
+                </div>
+                <br><br>
+                <div onclick="triggerDivClick('role-id')"><div class="bar-expandable" onclick="toggleContent()" id="no-select"><div class="text-expandable"> --- Click To Close Content --- </div></div></div>
+                <br>
+            </div>
+            <div class="bar-skip"></div>
         </div>
-        <br><br><br>
+        <br>
         </div>
         <div class="box-background">
             <div><div class="box-project"><h3>Aibaverse NFT</h3>

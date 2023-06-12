@@ -6,6 +6,7 @@
     --PastelGreen:#1c7383;
     --PastelRed:#dd5050;
     --PastelWhite: #ffffff;
+    --PastelClick: #7ae9e0;
 } 
 
 @font-face {
@@ -21,6 +22,16 @@
 @font-face {
     font-family: 'Dot-Font';
     src: url(Font/DotGothic16-Regular.ttf);
+}
+
+#no-select {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-drag: none;
+    -moz-user-drag: none;
+    -ms-user-drag: none;
 }
 
 a{
@@ -52,11 +63,53 @@ table{
     width: auto;
 }
 
-@media (max-width: 1920px) {
-    .all-content{
+@media screen and (min-width: 1280px) { 
+    body{
+        zoom: 67%;
+    }
+} /* Need more testing on resolution */  
+
+@media screen and (min-width: 1366px) { 
+    body{
+        zoom: 72%;
+    }
+} /* Need more testing on resolution */  
+
+@media screen and (min-width: 1440px) { 
+    body{
+        zoom: 75%;
+    }
+} /* Need more testing on resolution */  
+
+@media screen and (min-width: 1536px) { 
+    body{
+        zoom: 80%;
+    }
+} /* Need more testing on resolution */  
+
+@media screen and (min-width: 1600px) { 
+    body{
+        zoom: 83%;
+    }
+} /* Need more testing on resolution */  
+
+@media screen and (min-width: 1920px) { 
+    body{
         zoom: 100%;
     }
-}
+} /* Need more testing on resolution */  
+
+@media screen and (min-width: 3840px) { 
+    body{
+        zoom: 201%;
+    }
+} /* Need more testing on resolution */  
+
+@media screen and (min-width: 4096px) { 
+    body{
+        zoom: 214%;
+    }
+} /* Need more testing on resolution */  
 
 .title{
     padding-top: 2rem;
@@ -431,17 +484,27 @@ h12{
     position: relative;
     bottom: 5px;
     left: 10px;
-    padding: 0.3rem;
-    background-color: var(--PastelWhite);
+    background-color: var(--PastelClick);
     border-radius: 1rem;
+    height: 3rem;
+    width: 30%;
     margin: auto;
-    font-size: 1.5rem;
+}
+
+.clickme-text{
+    position: relative;
+    top: 0.45rem;
+    margin: auto;
+    font-size: 2rem;
     color: black;
+    font-weight: normal;
+    text-align: center;
+    font-family: 'Pixel-Font';
 }
 
 .arc-box{
     margin: auto;
-    width: 80%;
+    width: 75%;
     border-radius: 1rem;
     border: 0.3rem solid var(--PastelGreen);
     overflow: hidden;
@@ -453,3 +516,114 @@ h12{
     border-radius: 1rem;
     margin: auto;
 }
+
+.bar-expandable{
+    position: relative;
+    background-color: var(--PastelClick);
+    cursor: pointer;
+    padding: 10px;
+    height: 1rem;
+    width: 80%;
+    margin: auto;
+    transition: height 0.5s;
+    border-radius: 1rem;
+}
+
+.bar-skip{
+    position: relative;
+    width: 85%;
+    margin: auto;
+    border-top: 8px dotted var(--PastelClick);
+}
+
+.content-expandable{
+    position: relative;
+    overflow: hidden;
+    padding: 10px;
+    height: 0;
+    transition: height 0.5s;
+}
+
+.content-expandable.show{
+    height: auto;
+}
+
+.text-expandable{
+    position: relative;
+    top: -0.5rem;
+    width: 80%;
+    margin: auto;
+    font-weight: normal;
+    text-align: center;
+    font-family: 'Pixel-Font';
+    font-size: 1.8rem;
+    color: black;
+}
+
+.Slime-box{
+    position: relative;
+    margin: auto;
+    width: 75%;
+    border-radius: 1rem;
+    border: 0.3rem solid var(--PastelGreen);
+}
+
+#Slime-content{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    border-radius: 1rem;
+    margin: auto;
+}
+
+#left-button{
+    position: absolute;
+    float: left;
+    top: 45%;
+    left: -4.8rem;
+    z-index: 10;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+#right-button{
+    position: absolute;
+    float: right;
+    top: 45%;
+    right: -4.8rem;
+    z-index: 10;
+    transform: scalex(-1);
+    cursor: pointer;
+}
+
+#left-button:hover{
+    animation: left-arrow 0.3s ease-in-out 2;
+}
+
+#right-button:hover{
+    animation: right-arrow 0.3s ease-in-out 2;
+}
+
+@keyframes left-arrow {
+    0% {
+        transform: translatex(0);
+      }
+      50% {
+        transform: translatex(-5px);
+      }
+      100% {
+        transform: translatex(0);
+      }
+  }
+
+@keyframes right-arrow {
+    0% {
+        transform: translatex(0) scaleX(-1);
+      }
+      50% {
+        transform: translatex(5px) scaleX(-1);
+      }
+      100% {
+        transform: translatex(0) scaleX(-1);
+      }
+  }
