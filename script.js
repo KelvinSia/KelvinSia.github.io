@@ -21,7 +21,7 @@ function triggerDivClick(divId) {
 
 // Slimess
 
-var dd = 3;
+var dd = 4;
 var cnt = 0;
 
 function left() {
@@ -33,9 +33,10 @@ function left() {
     "Slime_Pew_1.jpg",
     "Slime_Pew_2.jpg",
     "Slime_Pew_3.jpg",
+    "Slime_Pew_4.jpg",
   ];
 
-  cnt++;
+  cnt--;
 
   var len = images.length;
   if (cnt < dd) {
@@ -44,6 +45,11 @@ function left() {
   else if (cnt == len) {
     rr.src = imageDir + images[0];
     cnt = 0;
+  }
+
+  if (cnt < 0) {
+    rr.src = imageDir + images[3];
+    cnt = 3
   }
 }
 
@@ -56,9 +62,10 @@ function right() {
     "Slime_Pew_1.jpg",
     "Slime_Pew_2.jpg",
     "Slime_Pew_3.jpg",
+    "Slime_Pew_4.jpg",
   ];
 
-  cnt--;
+  cnt++;
 
   var len = images.length;
   if (cnt < dd) {
@@ -67,11 +74,6 @@ function right() {
   else if (cnt == len) {
     rr.src = imageDir + images[0];
     cnt = 0
-  }
-
-  if (cnt < 0) {
-    rr.src = imageDir + images[2];
-    cnt = 2
   }
 };
 
