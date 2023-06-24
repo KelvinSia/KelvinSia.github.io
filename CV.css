@@ -526,7 +526,8 @@ ul{
 
 .arc-box{
     margin: auto;
-    width: 70%;
+    width: 65rem;
+    height: 45rem;
     border-radius: 1rem;
     border: 0.3rem solid var(--PastelGreen);
     overflow: hidden;
@@ -536,6 +537,12 @@ ul{
     z-index: 1;
     width: 100%;
     margin: auto;
+}
+
+.arc-scroll{
+    overflow-y: scroll;
+    width: 100%;
+    height: 100%;
 }
 
 .bar-expandable{
@@ -590,6 +597,14 @@ ul{
 }
 
 #Slime-content{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    border-radius: 1rem;
+    margin: auto;
+}
+
+#arcs-content{
     position: relative;
     z-index: 1;
     width: 100%;

@@ -24,7 +24,7 @@ function triggerDivClick(divId) {
 var dd = 4;
 var cnt = 0;
 
-function left() {
+function leftslime() {
 
   var rr = document.getElementById('slime-content');
   var imageDir = 'Image/Slimess/'; 
@@ -53,7 +53,7 @@ function left() {
   }
 }
 
-function right() {
+function rightslime() {
 
   var rr = document.getElementById('slime-content');
   var imageDir = 'Image/Slimess/'; 
@@ -69,6 +69,66 @@ function right() {
 
   var len = images.length;
   if (cnt < dd) {
+    rr.src = imageDir + images[cnt];
+  }
+  else if (cnt == len) {
+    rr.src = imageDir + images[0];
+    cnt = 0
+  }
+};
+
+// Arc Sketch
+
+var ddd = 5;
+var cnt = 0;
+
+function leftarcs() {
+
+  var rr = document.getElementById('arcs-content');
+  var imageDir = 'Image/Sketches/'; 
+
+  var images = [
+    "Arc_Sketch_01.jpg",
+    "Arc_Sketch_02.jpg",
+    "Arc_Sketch_03.jpg",
+    "Arc_Sketch_04.jpg",
+    "Arc_Sketch_05.jpg",
+  ];
+
+  cnt--;
+
+  var len = images.length;
+  if (cnt < ddd) {
+    rr.src = imageDir + images[cnt];
+  }
+  else if (cnt == len) {
+    rr.src = imageDir + images[0];
+    cnt = 0;
+  }
+
+  if (cnt < 0) {
+    rr.src = imageDir + images[4];
+    cnt = 4
+  }
+}
+
+function rightarcs() {
+
+  var rr = document.getElementById('arcs-content');
+  var imageDir = 'Image/Sketches/'; 
+
+  var images = [
+    "Arc_Sketch_01.jpg",
+    "Arc_Sketch_02.jpg",
+    "Arc_Sketch_03.jpg",
+    "Arc_Sketch_04.jpg",
+    "Arc_Sketch_05.jpg",
+  ];
+
+  cnt++;
+
+  var len = images.length;
+  if (cnt < ddd) {
     rr.src = imageDir + images[cnt];
   }
   else if (cnt == len) {
