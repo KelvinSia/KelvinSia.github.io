@@ -79,7 +79,7 @@ function rightslime() {
 
 // Arc Sketch
 
-var ddd = 5;
+var ddd = 6;
 var cnt = 0;
 
 function leftarcs() {
@@ -93,6 +93,7 @@ function leftarcs() {
     "Arc_Sketch_03.jpg",
     "Arc_Sketch_04.jpg",
     "Arc_Sketch_05.jpg",
+    "Arc_Sketch_06.jpg",
   ];
 
   cnt--;
@@ -107,8 +108,8 @@ function leftarcs() {
   }
 
   if (cnt < 0) {
-    rr.src = imageDir + images[4];
-    cnt = 4
+    rr.src = imageDir + images[5];
+    cnt = 5
   }
 }
 
@@ -123,6 +124,7 @@ function rightarcs() {
     "Arc_Sketch_03.jpg",
     "Arc_Sketch_04.jpg",
     "Arc_Sketch_05.jpg",
+    "Arc_Sketch_06.jpg",
   ];
 
   cnt++;

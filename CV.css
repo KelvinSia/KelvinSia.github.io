@@ -7,6 +7,7 @@
     --PastelRed:#dd5050;
     --PastelWhite: #ffffff;
     --PastelClick: #7ae9e0;
+    --PastelTwitter: #e46ce4;
 } 
 
 @font-face {
@@ -547,7 +548,7 @@ ul{
 
 .bar-expandable{
     position: relative;
-    background-color: var(--PastelClick);
+    background-color: var(--PastelTwitter);
     cursor: pointer;
     padding: 10px;
     height: 1rem;
@@ -588,15 +589,16 @@ ul{
     color: black;
 }
 
-.Slime-box{
+.slime-box{
     position: relative;
     margin: auto;
-    width: 85%;
+    width: 65rem;
+    height: 32.5rem;
     border-radius: 1rem;
     border: 0.3rem solid var(--PastelGreen);
 }
 
-#Slime-content{
+#slime-content{
     position: relative;
     z-index: 1;
     width: 100%;
