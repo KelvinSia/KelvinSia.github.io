@@ -7,8 +7,10 @@
     --PastelRed:#dd5050;
     --PastelWhite: #ffffff;
     --PastelClick: #7ae9e0;
-    --PastelExpand1: #57d69b;
+    --PastelExpand1: #4bda97;
     --PastelExpand2: #E46CE4;
+    --PastelPopUp1: #fff67b;
+    --PastelPopUp2: #ffffff;
 } 
 
 @font-face {
@@ -59,6 +61,14 @@ body{
 
 table{
     max-width: 100%;
+}
+
+ul{
+    margin: auto;
+}
+
+li{
+    margin: auto;
 }
 
 .all-content{
@@ -112,6 +122,57 @@ table{
         zoom: 214%;
     }
 } /* Need more testing on resolution */  
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50rem;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 25px;
+    background-color: var(--PastelPopUp1);
+    border: 5px solid var(--PastelPopUp2);
+    text-align: center;
+    z-index: 9999;
+}
+
+.ok-button{
+    margin: auto;
+    width: 6rem;
+    padding: 0.3rem;
+    font-size: 1.5rem;
+}
+
+.popup-text1{
+    padding: 10px;
+    margin: auto;
+    font-weight: normal;
+    font-family: 'Pixel-Font';
+    font-size: 4.5rem;
+    color: var(--PastelRed);
+}
+
+.popup-text2{
+    margin: auto;
+    padding-bottom: 25px;
+    font-weight: normal;
+    font-family: 'Pixel-Font';
+    font-size: 3.3rem;
+    color: var(--PastelRed);
+}
+
+.popup-text3{
+    margin-left: 3rem;
+    padding-bottom: 1rem;
+    text-align: left;
+    font-weight: normal;
+    font-family: 'Pixel-Font';
+    font-size: 2.3rem;
+    color: var(--PastelGreen);
+}
 
 .title{
     padding-top: 2rem;

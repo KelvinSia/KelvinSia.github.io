@@ -4,6 +4,16 @@ function scrollToTop() {
 
 window.addEventListener('beforeunload', scrollToTop);
 
+// PopUp
+
+function openPopup() {
+  document.getElementById("popupBox").style.display = "block";
+}
+
+function closePopup() {
+  document.getElementById("popupBox").style.display = "none";
+}
+
 // Expandable Tab
 
 function toggleContent(elementId) {
