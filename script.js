@@ -18,6 +18,16 @@ function closePopup() {
 
 function toggleContent(elementId) {
   var content = document.getElementById(elementId);
+  var preview = document.getElementById("preview-AMap");
+
+  if (elementId === "myContent-expandable-AMap") {
+    if (preview.style.display === "none") {
+      preview.style.display = "block";
+    } else {
+      preview.style.display = "none";
+    }
+  }
+
   content.classList.toggle("show");
 }
 
