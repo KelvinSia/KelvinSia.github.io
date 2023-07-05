@@ -10,15 +10,17 @@
 </head>
 <body>
     <div class="all-content">
-        <div id="popupBox" class="popup">
-            <p class="popup-text1">Hello W0rld!</p>
-            <p class="popup-text2">- just a quick heads up! -</p>
-            <ul>
-                <li class="popup-text3"><span>For the best user experience, please use <br>a computer. Thanks!</span></li>
-                <li class="popup-text3"><span>When clicking on some button, please be aware <br>that some content may take a moment to load.</span></li>
-                <li class="popup-text3"><span>I apologize for any inconvenience caused. <br>Thank you for your understanding!</span></li>
-            </ul>
-            <button onclick="closePopup()" class="ok-button">OK</button>
+        <div id="popupBox" class="popupbg">
+            <div class="popup">
+                <p class="popup-text1">Hello W0rld!</p>
+                <p class="popup-text2">- just a quick heads up! -</p>
+                <ul>
+                    <li class="popup-text3"><span style="color: #1c7383;">For the best user experience, please use <br>a computer. Thanks!</span></li>
+                    <li class="popup-text3"><span style="color: #1c7383;">When clicking on some button, please be aware <br>that some content may take a moment to load.</span></li>
+                    <li class="popup-text3"><span style="color: #1c7383;">I apologize for any inconvenience caused. <br>Thank you for your understanding!</span></li>
+                </ul>
+                <button onclick="closePopup()" class="ok-button">OK</button>
+            </div>
         </div>
         <div class="title">
             <div class="logo"><div class="content"><img src="Image/PP.jpg" alt="Logo" class="resized-logo"></div></div>
@@ -71,9 +73,11 @@
                     <div class="roles-boxlining-dot"></div>
                     <h13>The First map of Seven Arc Chronicles as a tutorial island! Player will encounter new <br>party members through adventures and learn more about The Demon King from Slime Village.</h13>
                     <br><br><br><br><br>
-                    <div class="arc-box"><img src="Image/Arc/AMap_Preview/Preview_Map.jpg" alt="Preview Map" class="arc-content"/></div>
-                    <br><br>
-                    <div class="bar-expandable-AMap" onclick="toggleContent('myContent-expandable-AMap')" id="no-select"><div id="toggleText" class="text-expandable"> -- Expand Content -- </div></div>
+                    <div id="preview-AMap">
+                        <div class="arc-box"><img src="Image/Arc/AMap_Preview/Preview_Map.jpg" alt="Preview Map" class="arc-content"/></div>
+                        <br><br>
+                        <div class="bar-expandable-AMap" onclick="toggleContent('myContent-expandable-AMap')" id="no-select"><div id="toggleText" class="text-expandable"> -- Expand Content -- </div></div>
+                    </div>
                     <div class="content-expandable" id="myContent-expandable-AMap">
                         <br>
                         <div class="arc-box-long"><img src="Image/Arc/AMap_Preview/Portfolio - Arc_01.jpg" alt="Preview Map" class="arc-content"/><img src="Image/Arc/AMap_Preview/Portfolio - Arc_02.jpg" alt="Preview Map" class="arc-content" style="margin-top: -1rem;"/></div>
