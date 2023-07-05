@@ -161,4 +161,66 @@ function rightarcs() {
   }
 };
 
+// NFT Characters
+
+var dddd = 6;
+var cntdd = 0;
+
+function leftabc() {
+
+  var rr = document.getElementById('abc-content');
+  var imageDir = 'Image/Verse/Character/'; 
+
+  var images = [
+    "ABC_1.jpg",
+    "ABC_2.jpg",
+    "ABC_3.jpg",
+    "ABC_4.jpg",
+    "ABC_5.jpg",
+    "ABC_6.jpg",
+  ];
+
+  cntdd--;
+
+  var len = images.length;
+  if (cntdd < dddd) {
+    rr.src = imageDir + images[cntdd];
+  }
+  else if (cntdd == len) {
+    rr.src = imageDir + images[0];
+    cntdd = 0;
+  }
+
+  if (cntdd < 0) {
+    rr.src = imageDir + images[5];
+    cntdd = 5
+  }
+}
+
+function rightabc() {
+
+  var rr = document.getElementById('abc-content');
+  var imageDir = 'Image/Verse/Character/'; 
+
+  var images = [
+    "ABC_1.jpg",
+    "ABC_2.jpg",
+    "ABC_3.jpg",
+    "ABC_4.jpg",
+    "ABC_5.jpg",
+    "ABC_6.jpg",
+  ];
+
+  cntdd++;
+
+  var len = images.length;
+  if (cntdd < dddd) {
+    rr.src = imageDir + images[cntdd];
+  }
+  else if (cntdd == len) {
+    rr.src = imageDir + images[0];
+    cntdd = 0
+  }
+};
+
 // END

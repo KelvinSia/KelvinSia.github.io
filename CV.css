@@ -617,6 +617,16 @@ ul{
     overflow: hidden;
 }
 
+.ab-box-long{
+    position: relative;
+    margin: auto;
+    width: 65rem;
+    height: 45rem;
+    border-radius: 1rem;
+    border: 0.3rem solid var(--PastelGreen);
+    overflow: hidden;
+}
+
 .arc-content{
     z-index: 1;
     width: 100%;
@@ -710,6 +720,15 @@ ul{
     width: 100%;
     border-radius: 1rem;
     margin: auto;
+}
+
+#abc-content{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    border-radius: 1rem;
+    margin: auto;
+    image-rendering: pixelated;
 }
 
 #left-button{
