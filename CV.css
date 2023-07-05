@@ -7,7 +7,8 @@
     --PastelRed:#dd5050;
     --PastelWhite: #ffffff;
     --PastelClick: #7ae9e0;
-    --PastelTwitter: #e46ce4;
+    --PastelExpand1: #57d69b;
+    --PastelExpand2: #E46CE4;
 } 
 
 @font-face {
@@ -534,6 +535,15 @@ ul{
     overflow: hidden;
 }
 
+.arc-box-long{
+    margin: auto;
+    width: 65rem;
+    height: auto;
+    border-radius: 1rem;
+    border: 0.3rem solid var(--PastelGreen);
+    overflow: hidden;
+}
+
 .arc-content{
     z-index: 1;
     width: 100%;
@@ -547,7 +557,20 @@ ul{
 
 .bar-expandable{
     position: relative;
-    background-color: var(--PastelTwitter);
+    background-color: var(--PastelExpand1);
+    cursor: pointer;
+    padding: 10px;
+    height: 1rem;
+    width: 80%;
+    margin: auto;
+    transition: height 0.5s;
+    border-radius: 1rem;
+}
+
+.bar-expandable-AMap{
+    position: relative;
+    top: -5px;
+    background-color: var(--PastelExpand2);
     cursor: pointer;
     padding: 10px;
     height: 1rem;
@@ -574,6 +597,10 @@ ul{
 
 .content-expandable.show{
     height: auto;
+}
+
+.hidden{
+    display: none;
 }
 
 .text-expandable{

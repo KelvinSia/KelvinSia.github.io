@@ -6,8 +6,8 @@ window.addEventListener('beforeunload', scrollToTop);
 
 // Expandable Tab
 
-function toggleContent() {
-  var content = document.getElementById("myContent-expandable");
+function toggleContent(elementId) {
+  var content = document.getElementById(elementId);
   content.classList.toggle("show");
 }
 
@@ -27,7 +27,7 @@ var cnt = 0;
 function leftslime() {
 
   var rr = document.getElementById('slime-content');
-  var imageDir = 'Image/Slimess/'; 
+  var imageDir = 'Image/Arc/Slimess/'; 
 
   var images = [
     "Slime_Pew_1.jpg",
@@ -56,7 +56,7 @@ function leftslime() {
 function rightslime() {
 
   var rr = document.getElementById('slime-content');
-  var imageDir = 'Image/Slimess/'; 
+  var imageDir = 'Image/Arc/Slimess/'; 
 
   var images = [
     "Slime_Pew_1.jpg",
@@ -85,7 +85,7 @@ var cntd = 0;
 function leftarcs() {
 
   var rr = document.getElementById('arcs-content');
-  var imageDir = 'Image/Sketches/'; 
+  var imageDir = 'Image/Arc/Sketches/'; 
 
   var images = [
     "Arc_Sketch_01.jpg",
@@ -117,7 +117,7 @@ function leftarcs() {
 function rightarcs() {
 
   var rr = document.getElementById('arcs-content');
-  var imageDir = 'Image/Sketches/'; 
+  var imageDir = 'Image/Arc/Sketches/'; 
 
   var images = [
     "Arc_Sketch_01.jpg",
