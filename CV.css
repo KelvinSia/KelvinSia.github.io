@@ -731,6 +731,15 @@ ul{
     image-rendering: pixelated;
 }
 
+#SSR-content{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    border-radius: 1rem;
+    margin: auto;
+    image-rendering: pixelated;
+}
+
 #left-button{
     position: absolute;
     float: left;
