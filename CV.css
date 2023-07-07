@@ -329,6 +329,15 @@ h13{
     color: var(--PastelWhite);
 }
 
+h14{
+    font-weight: normal;
+    text-align: center;
+    font-family: 'Pixel-Font';
+    margin-left: 5rem;
+    font-size: 3rem;
+    color: var(--PastelRed);
+}
+
 ul{
     color: var(--PastelGreen) ;
     font-size: 2rem;
