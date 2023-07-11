@@ -248,7 +248,7 @@ function leftSSR() {
   }
   else if (cntddd == len) {
     rr.src = imageDir + images[0];
-    cntdd = 0;
+    cntddd = 0;
   }
 
   if (cntddd < 0) {
