@@ -19,11 +19,6 @@ function closePopup() {
 function toggleContent(elementId) {
   var content = document.getElementById(elementId);
   var preview = document.getElementById("preview-AMap");
-  var preview1 = document.getElementById("preview-bar-1");
-  var preview2 = document.getElementById("preview-bar-2");
-  var preview3 = document.getElementById("preview-bar-3");
-  var preview4 = document.getElementById("preview-Arc");
-  var preview5 = document.getElementById("preview-AB");
 
   if (elementId === "myContent-expandable-AMap") {
     if (preview.style.display === "none") {
@@ -32,47 +27,6 @@ function toggleContent(elementId) {
       preview.style.display = "none";
     }
   }
-
-  if (elementId === "myContent-expandable-EX1") {
-    if (preview1.style.display === "none") {
-      preview1.style.display = "block";
-    } else {
-      preview1.style.display = "none";
-    }
-  }
-
-  if (elementId === "myContent-expandable-EX2") {
-    if (preview2.style.display === "none") {
-      preview2.style.display = "block";
-    } else {
-      preview2.style.display = "none";
-    }
-  }
-
-  if (elementId === "myContent-expandable-EX3") {
-    if (preview3.style.display === "none") {
-      preview3.style.display = "block";
-    } else {
-      preview3.style.display = "none";
-    }
-  }
-
-  if (elementId === "myContent-expandable-Arc") {
-    if (preview4.style.display === "none") {
-      preview4.style.display = "block";
-    } else {
-      preview4.style.display = "none";
-    }
-  }
-
-  if (elementId === "myContent-expandable-Ab") {
-    if (preview5.style.display === "none") {
-      preview5.style.display = "block";
-    } else {
-      preview5.style.display = "none";
-    }
-  }
-
 
   content.classList.toggle("show");
 }
