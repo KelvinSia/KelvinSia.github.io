@@ -822,7 +822,6 @@ ul{
     width: 100%;
     border-radius: 1rem;
     margin: auto;
-    image-rendering: pixelated;
 }
 
 #left-button{

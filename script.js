@@ -283,59 +283,71 @@ function rightSSR() {
 
 // Xtra Concepts
 
-var ddddd = 4;
-var cntddd = 0;
+var dddddx = 10;
+var cntdddx = 0;
 
-function leftSSR() {
+function leftxtra() {
 
-  var rr = document.getElementById('SSR-content');
-  var imageDir = 'Image/Verse/SSR/'; 
+  var rr = document.getElementById('xtra-content');
+  var imageDir = 'Image/External/Extra/'; 
 
   var images = [
-    "SSR_1_E.gif",
-    "SSR_2_E.gif",
-    "SSR_3_E.gif",
-    "SSR_4_E.gif",
+    "AibaNFT_1.jpg",
+    "AibaNFT_2.jpg",
+    "AibaNFT_3.jpg",
+    "AibaNFT_4.jpg",
+    "AibaNFT_5.jpg",
+    "AibaNFT_6.jpg",
+    "CartoonNFT_1.jpg",
+    "CartoonNFT_2.jpg",
+    "GamblerNFT_1.jpg",
+    "GamblerNFT_2.jpg",
   ];
 
-  cntddd--;
+  cntdddx--;
 
   var len = images.length;
-  if (cntddd < ddddd) {
-    rr.src = imageDir + images[cntddd];
+  if (cntdddx < dddddx) {
+    rr.src = imageDir + images[cntdddx];
   }
-  else if (cntddd == len) {
+  else if (cntdddx == len) {
     rr.src = imageDir + images[0];
-    cntddd = 0;
+    cntdddx = 0;
   }
 
-  if (cntddd < 0) {
-    rr.src = imageDir + images[3];
-    cntddd = 3
+  if (cntdddx < 0) {
+    rr.src = imageDir + images[9];
+    cntdddx = 9
   }
 }
 
-function rightSSR() {
+function rightxtra() {
 
-  var rr = document.getElementById('SSR-content');
-  var imageDir = 'Image/Verse/SSR/'; 
+  var rr = document.getElementById('xtra-content');
+  var imageDir = 'Image/External/Extra/'; 
 
   var images = [
-    "SSR_1_E.gif",
-    "SSR_2_E.gif",
-    "SSR_3_E.gif",
-    "SSR_4_E.gif",
+    "AibaNFT_1.jpg",
+    "AibaNFT_2.jpg",
+    "AibaNFT_3.jpg",
+    "AibaNFT_4.jpg",
+    "AibaNFT_5.jpg",
+    "AibaNFT_6.jpg",
+    "CartoonNFT_1.jpg",
+    "CartoonNFT_2.jpg",
+    "GamblerNFT_1.jpg",
+    "GamblerNFT_2.jpg",
   ];
 
-  cntddd++;
+  cntdddx++;
 
   var len = images.length;
-  if (cntddd < ddddd) {
-    rr.src = imageDir + images[cntddd];
+  if (cntdddx < dddddx) {
+    rr.src = imageDir + images[cntdddx];
   }
-  else if (cntddd == len) {
+  else if (cntdddx == len) {
     rr.src = imageDir + images[0];
-    cntddd = 0
+    cntdddx = 0
   }
 };
 
