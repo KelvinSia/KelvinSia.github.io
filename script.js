@@ -281,4 +281,63 @@ function rightSSR() {
   }
 };
 
+// Xtra Concepts
+
+var ddddd = 4;
+var cntddd = 0;
+
+function leftSSR() {
+
+  var rr = document.getElementById('SSR-content');
+  var imageDir = 'Image/Verse/SSR/'; 
+
+  var images = [
+    "SSR_1_E.gif",
+    "SSR_2_E.gif",
+    "SSR_3_E.gif",
+    "SSR_4_E.gif",
+  ];
+
+  cntddd--;
+
+  var len = images.length;
+  if (cntddd < ddddd) {
+    rr.src = imageDir + images[cntddd];
+  }
+  else if (cntddd == len) {
+    rr.src = imageDir + images[0];
+    cntddd = 0;
+  }
+
+  if (cntddd < 0) {
+    rr.src = imageDir + images[3];
+    cntddd = 3
+  }
+}
+
+function rightSSR() {
+
+  var rr = document.getElementById('SSR-content');
+  var imageDir = 'Image/Verse/SSR/'; 
+
+  var images = [
+    "SSR_1_E.gif",
+    "SSR_2_E.gif",
+    "SSR_3_E.gif",
+    "SSR_4_E.gif",
+  ];
+
+  cntddd++;
+
+  var len = images.length;
+  if (cntddd < ddddd) {
+    rr.src = imageDir + images[cntddd];
+  }
+  else if (cntddd == len) {
+    rr.src = imageDir + images[0];
+    cntddd = 0
+  }
+};
+
+
 // END
