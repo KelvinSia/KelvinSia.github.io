@@ -75,6 +75,12 @@ li{
     width: auto;
 }
 
+@media screen and (min-width: 320px) { 
+    body{
+        zoom: 10%;
+    }
+} /* Need more testing on resolution */ 
+
 @media screen and (min-width: 1280px) { 
     body{
         zoom: 67%;
