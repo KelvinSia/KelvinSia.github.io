@@ -145,6 +145,12 @@ li{
     z-index: 9999;
 }
 
+@media only screen and (max-width: 600px) { 
+    .popup{
+        zoom: 300%;
+    }
+} /* Need more testing on resolution */ 
+
 .popupbg {
     position: fixed;
     top: 50%;
