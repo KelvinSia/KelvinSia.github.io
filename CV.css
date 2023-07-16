@@ -13,6 +13,14 @@
     --PastelPopUp: #ece578;
 } 
 
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    list-style: none;
+}
+
 @font-face {
     font-family: 'Pixel-Font';
     src: url(Font/VT323-Regular.ttf);
