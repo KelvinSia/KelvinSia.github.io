@@ -13,6 +13,10 @@
     --PastelPopUp: #ece578;
 } 
 
+* {
+    line-height: 1;
+}
+
 @font-face {
     font-family: 'Pixel-Font';
     src: url(Font/VT323-Regular.ttf);
@@ -45,6 +49,7 @@ a{
 html{
     background-color: var(--PastelDarkPurple);
     padding: 5rem;
+    margin: auto;
 }
 
 body{
@@ -71,11 +76,7 @@ li{
     margin: auto;
 }
 
-.all-content{
-    width: auto;
-}
-
-@media only screen and (max-width: 600px) { 
+@media only screen and (max-width: 1280px) { 
     body{
         zoom: 10%;
     }
