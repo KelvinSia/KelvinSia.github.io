@@ -160,7 +160,4 @@ function rightxtra() {
   xtraIndex = changeImage('xtra-content', 'Image/External/Extra/', xtraImages, xtraIndex, xtraCount, 'right');
 }
 
-
-
-
 // END
