@@ -39,24 +39,22 @@ function triggerDivClick(divId) {
   divElement.scrollIntoView({ behavior: "smooth" });
 }
 
-function changeImage(id, imageDir, images, count, limit) {
+function changeImage(id, imageDir, images, count, limit, direction) {
   var element = document.getElementById(id);
 
-  count--;
-
-  var len = images.length;
-
-  if (count < limit) {
-    element.src = imageDir + images[count];
-  } else if (count == len) {
-    element.src = imageDir + images[0];
-    count = 0;
+  if (direction === 'left') {
+    count--;
+    if (count < 0) {
+      count = limit - 1;
+    }
+  } else if (direction === 'right') {
+    count++;
+    if (count >= limit) {
+      count = 0;
+    }
   }
 
-  if (count < 0) {
-    element.src = imageDir + images[len - 1];
-    count = len - 1;
-  }
+  element.src = imageDir + images[count];
 
   return count;
 }
@@ -72,11 +70,11 @@ var slimeImages = [
 ];
 
 function leftslime() {
-  slimeIndex = changeImage('slime-content', 'Image/Arc/Slimess/', slimeImages, slimeIndex, slimeCount);
+  slimeIndex = changeImage('slime-content', 'Image/Arc/Slimess/', slimeImages, slimeIndex, slimeCount, 'left');
 }
 
 function rightslime() {
-  slimeIndex = changeImage('slime-content', 'Image/Arc/Slimess/', slimeImages, slimeIndex, slimeCount);
+  slimeIndex = changeImage('slime-content', 'Image/Arc/Slimess/', slimeImages, slimeIndex, slimeCount, 'right');
 }
 
 // Arc Sketch
@@ -93,11 +91,11 @@ var arcsImages = [
 ];
 
 function leftarcs() {
-  arcsIndex = changeImage('arcs-content', 'Image/Arc/Sketches/', arcsImages, arcsIndex, arcsCount);
+  arcsIndex = changeImage('arcs-content', 'Image/Arc/Sketches/', arcsImages, arcsIndex, arcsCount, 'left');
 }
 
 function rightarcs() {
-  arcsIndex = changeImage('arcs-content', 'Image/Arc/Sketches/', arcsImages, arcsIndex, arcsCount);
+  arcsIndex = changeImage('arcs-content', 'Image/Arc/Sketches/', arcsImages, arcsIndex, arcsCount, 'right');
 }
 
 // NFT Characters
@@ -113,11 +111,11 @@ var abcImages = [
 ];
 
 function leftabc() {
-  abcIndex = changeImage('abc-content', 'Image/Verse/Character/', abcImages, abcIndex, abcCount);
+  abcIndex = changeImage('abc-content', 'Image/Verse/Character/', abcImages, abcIndex, abcCount, 'left');
 }
 
 function rightabc() {
-  abcIndex = changeImage('abc-content', 'Image/Verse/Character/', abcImages, abcIndex, abcCount);
+  abcIndex = changeImage('abc-content', 'Image/Verse/Character/', abcImages, abcIndex, abcCount, 'right');
 }
 
 // SSR
@@ -131,11 +129,11 @@ var ssrImages = [
 ];
 
 function leftSSR() {
-  ssrIndex = changeImage('SSR-content', 'Image/Verse/SSR/', ssrImages, ssrIndex, ssrCount);
+  ssrIndex = changeImage('SSR-content', 'Image/Verse/SSR/', ssrImages, ssrIndex, ssrCount, 'left');
 }
 
 function rightSSR() {
-  ssrIndex = changeImage('SSR-content', 'Image/Verse/SSR/', ssrImages, ssrIndex, ssrCount);
+  ssrIndex = changeImage('SSR-content', 'Image/Verse/SSR/', ssrImages, ssrIndex, ssrCount, 'right');
 }
 
 // Xtra Concepts
@@ -155,12 +153,13 @@ var xtraImages = [
 ];
 
 function leftxtra() {
-  xtraIndex = changeImage('xtra-content', 'Image/External/Extra/', xtraImages, xtraIndex, xtraCount);
+  xtraIndex = changeImage('xtra-content', 'Image/External/Extra/', xtraImages, xtraIndex, xtraCount, 'left');
 }
 
 function rightxtra() {
-  xtraIndex = changeImage('xtra-content', 'Image/External/Extra/', xtraImages, xtraIndex, xtraCount);
+  xtraIndex = changeImage('xtra-content', 'Image/External/Extra/', xtraImages, xtraIndex, xtraCount, 'right');
 }
+
 
 
 
