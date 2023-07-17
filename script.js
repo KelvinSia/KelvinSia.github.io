@@ -39,317 +39,129 @@ function triggerDivClick(divId) {
   divElement.scrollIntoView({ behavior: "smooth" });
 }
 
-// Slimess
+function changeImage(id, imageDir, images, count, limit) {
+  var element = document.getElementById(id);
 
-var dd = 4;
-var cnt = 0;
-
-function leftslime() {
-
-  var rr = document.getElementById('slime-content');
-  var imageDir = 'Image/Arc/Slimess/'; 
-
-  var images = [
-    "Slime_Pew_1.jpg",
-    "Slime_Pew_2.jpg",
-    "Slime_Pew_3.jpg",
-    "Slime_Pew_4.jpg",
-  ];
-
-  cnt--;
+  count--;
 
   var len = images.length;
-  if (cnt < dd) {
-    rr.src = imageDir + images[cnt];
-  }
-  else if (cnt == len) {
-    rr.src = imageDir + images[0];
-    cnt = 0;
+
+  if (count < limit) {
+    element.src = imageDir + images[count];
+  } else if (count == len) {
+    element.src = imageDir + images[0];
+    count = 0;
   }
 
-  if (cnt < 0) {
-    rr.src = imageDir + images[3];
-    cnt = 3
+  if (count < 0) {
+    element.src = imageDir + images[len - 1];
+    count = len - 1;
   }
+
+  return count;
+}
+
+// Slimess
+var slimeCount = 4;
+var slimeIndex = 0;
+var slimeImages = [
+  "Slime_Pew_1.jpg",
+  "Slime_Pew_2.jpg",
+  "Slime_Pew_3.jpg",
+  "Slime_Pew_4.jpg"
+];
+
+function leftslime() {
+  slimeIndex = changeImage('slime-content', 'Image/Arc/Slimess/', slimeImages, slimeIndex, slimeCount);
 }
 
 function rightslime() {
-
-  var rr = document.getElementById('slime-content');
-  var imageDir = 'Image/Arc/Slimess/'; 
-
-  var images = [
-    "Slime_Pew_1.jpg",
-    "Slime_Pew_2.jpg",
-    "Slime_Pew_3.jpg",
-    "Slime_Pew_4.jpg",
-  ];
-
-  cnt++;
-
-  var len = images.length;
-  if (cnt < dd) {
-    rr.src = imageDir + images[cnt];
-  }
-  else if (cnt == len) {
-    rr.src = imageDir + images[0];
-    cnt = 0
-  }
-};
+  slimeIndex = changeImage('slime-content', 'Image/Arc/Slimess/', slimeImages, slimeIndex, slimeCount);
+}
 
 // Arc Sketch
-
-var ddd = 7;
-var cntd = 0;
+var arcsCount = 7;
+var arcsIndex = 0;
+var arcsImages = [
+  "Arc_Sketch_01.jpg",
+  "Arc_Sketch_02.jpg",
+  "Arc_Sketch_03.jpg",
+  "Arc_Sketch_04.jpg",
+  "Arc_Sketch_05.jpg",
+  "Arc_Sketch_06.jpg",
+  "Arc_Sketch_07.jpg"
+];
 
 function leftarcs() {
-
-  var rr = document.getElementById('arcs-content');
-  var imageDir = 'Image/Arc/Sketches/'; 
-
-  var images = [
-    "Arc_Sketch_01.jpg",
-    "Arc_Sketch_02.jpg",
-    "Arc_Sketch_03.jpg",
-    "Arc_Sketch_04.jpg",
-    "Arc_Sketch_05.jpg",
-    "Arc_Sketch_06.jpg",
-    "Arc_Sketch_07.jpg",
-  ];
-
-  cntd--;
-
-  var len = images.length;
-  if (cntd < ddd) {
-    rr.src = imageDir + images[cntd];
-  }
-  else if (cntd == len) {
-    rr.src = imageDir + images[0];
-    cntd = 0;
-  }
-
-  if (cntd < 0) {
-    rr.src = imageDir + images[6];
-    cntd = 6
-  }
+  arcsIndex = changeImage('arcs-content', 'Image/Arc/Sketches/', arcsImages, arcsIndex, arcsCount);
 }
 
 function rightarcs() {
-
-  var rr = document.getElementById('arcs-content');
-  var imageDir = 'Image/Arc/Sketches/'; 
-
-  var images = [
-    "Arc_Sketch_01.jpg",
-    "Arc_Sketch_02.jpg",
-    "Arc_Sketch_03.jpg",
-    "Arc_Sketch_04.jpg",
-    "Arc_Sketch_05.jpg",
-    "Arc_Sketch_06.jpg",
-    "Arc_Sketch_07.jpg",
-  ];
-
-  cntd++;
-
-  var len = images.length;
-  if (cntd < ddd) {
-    rr.src = imageDir + images[cntd];
-  }
-  else if (cntd == len) {
-    rr.src = imageDir + images[0];
-    cntd = 0
-  }
-};
+  arcsIndex = changeImage('arcs-content', 'Image/Arc/Sketches/', arcsImages, arcsIndex, arcsCount);
+}
 
 // NFT Characters
-
-var dddd = 6;
-var cntdd = 0;
+var abcCount = 6;
+var abcIndex = 0;
+var abcImages = [
+  "ABC_1.jpg",
+  "ABC_2.jpg",
+  "ABC_3.jpg",
+  "ABC_4.jpg",
+  "ABC_5.jpg",
+  "ABC_6.jpg"
+];
 
 function leftabc() {
-
-  var rr = document.getElementById('abc-content');
-  var imageDir = 'Image/Verse/Character/'; 
-
-  var images = [
-    "ABC_1.jpg",
-    "ABC_2.jpg",
-    "ABC_3.jpg",
-    "ABC_4.jpg",
-    "ABC_5.jpg",
-    "ABC_6.jpg",
-  ];
-
-  cntdd--;
-
-  var len = images.length;
-  if (cntdd < dddd) {
-    rr.src = imageDir + images[cntdd];
-  }
-  else if (cntdd == len) {
-    rr.src = imageDir + images[0];
-    cntdd = 0;
-  }
-
-  if (cntdd < 0) {
-    rr.src = imageDir + images[5];
-    cntdd = 5
-  }
+  abcIndex = changeImage('abc-content', 'Image/Verse/Character/', abcImages, abcIndex, abcCount);
 }
 
 function rightabc() {
-
-  var rr = document.getElementById('abc-content');
-  var imageDir = 'Image/Verse/Character/'; 
-
-  var images = [
-    "ABC_1.jpg",
-    "ABC_2.jpg",
-    "ABC_3.jpg",
-    "ABC_4.jpg",
-    "ABC_5.jpg",
-    "ABC_6.jpg",
-  ];
-
-  cntdd++;
-
-  var len = images.length;
-  if (cntdd < dddd) {
-    rr.src = imageDir + images[cntdd];
-  }
-  else if (cntdd == len) {
-    rr.src = imageDir + images[0];
-    cntdd = 0
-  }
-};
+  abcIndex = changeImage('abc-content', 'Image/Verse/Character/', abcImages, abcIndex, abcCount);
+}
 
 // SSR
-
-var ddddd = 4;
-var cntddd = 0;
+var ssrCount = 4;
+var ssrIndex = 0;
+var ssrImages = [
+  "SSR_1_E.gif",
+  "SSR_2_E.gif",
+  "SSR_3_E.gif",
+  "SSR_4_E.gif"
+];
 
 function leftSSR() {
-
-  var rr = document.getElementById('SSR-content');
-  var imageDir = 'Image/Verse/SSR/'; 
-
-  var images = [
-    "SSR_1_E.gif",
-    "SSR_2_E.gif",
-    "SSR_3_E.gif",
-    "SSR_4_E.gif",
-  ];
-
-  cntddd--;
-
-  var len = images.length;
-  if (cntddd < ddddd) {
-    rr.src = imageDir + images[cntddd];
-  }
-  else if (cntddd == len) {
-    rr.src = imageDir + images[0];
-    cntddd = 0;
-  }
-
-  if (cntddd < 0) {
-    rr.src = imageDir + images[3];
-    cntddd = 3
-  }
+  ssrIndex = changeImage('SSR-content', 'Image/Verse/SSR/', ssrImages, ssrIndex, ssrCount);
 }
 
 function rightSSR() {
-
-  var rr = document.getElementById('SSR-content');
-  var imageDir = 'Image/Verse/SSR/'; 
-
-  var images = [
-    "SSR_1_E.gif",
-    "SSR_2_E.gif",
-    "SSR_3_E.gif",
-    "SSR_4_E.gif",
-  ];
-
-  cntddd++;
-
-  var len = images.length;
-  if (cntddd < ddddd) {
-    rr.src = imageDir + images[cntddd];
-  }
-  else if (cntddd == len) {
-    rr.src = imageDir + images[0];
-    cntddd = 0
-  }
-};
+  ssrIndex = changeImage('SSR-content', 'Image/Verse/SSR/', ssrImages, ssrIndex, ssrCount);
+}
 
 // Xtra Concepts
-
-var dddddx = 10;
-var cntdddx = 0;
+var xtraCount = 10;
+var xtraIndex = 0;
+var xtraImages = [
+  "AibaNFT_1.jpg",
+  "AibaNFT_2.jpg",
+  "AibaNFT_3.jpg",
+  "AibaNFT_4.jpg",
+  "AibaNFT_5.jpg",
+  "AibaNFT_6.jpg",
+  "CartoonNFT_1.jpg",
+  "CartoonNFT_2.jpg",
+  "GamblerNFT_1.jpg",
+  "GamblerNFT_2.jpg"
+];
 
 function leftxtra() {
-
-  var rr = document.getElementById('xtra-content');
-  var imageDir = 'Image/External/Extra/'; 
-
-  var images = [
-    "AibaNFT_1.jpg",
-    "AibaNFT_2.jpg",
-    "AibaNFT_3.jpg",
-    "AibaNFT_4.jpg",
-    "AibaNFT_5.jpg",
-    "AibaNFT_6.jpg",
-    "CartoonNFT_1.jpg",
-    "CartoonNFT_2.jpg",
-    "GamblerNFT_1.jpg",
-    "GamblerNFT_2.jpg",
-  ];
-
-  cntdddx--;
-
-  var len = images.length;
-  if (cntdddx < dddddx) {
-    rr.src = imageDir + images[cntdddx];
-  }
-  else if (cntdddx == len) {
-    rr.src = imageDir + images[0];
-    cntdddx = 0;
-  }
-
-  if (cntdddx < 0) {
-    rr.src = imageDir + images[9];
-    cntdddx = 9
-  }
+  xtraIndex = changeImage('xtra-content', 'Image/External/Extra/', xtraImages, xtraIndex, xtraCount);
 }
 
 function rightxtra() {
+  xtraIndex = changeImage('xtra-content', 'Image/External/Extra/', xtraImages, xtraIndex, xtraCount);
+}
 
-  var rr = document.getElementById('xtra-content');
-  var imageDir = 'Image/External/Extra/'; 
-
-  var images = [
-    "AibaNFT_1.jpg",
-    "AibaNFT_2.jpg",
-    "AibaNFT_3.jpg",
-    "AibaNFT_4.jpg",
-    "AibaNFT_5.jpg",
-    "AibaNFT_6.jpg",
-    "CartoonNFT_1.jpg",
-    "CartoonNFT_2.jpg",
-    "GamblerNFT_1.jpg",
-    "GamblerNFT_2.jpg",
-  ];
-
-  cntdddx++;
-
-  var len = images.length;
-  if (cntdddx < dddddx) {
-    rr.src = imageDir + images[cntdddx];
-  }
-  else if (cntdddx == len) {
-    rr.src = imageDir + images[0];
-    cntdddx = 0
-  }
-};
 
 
 // END
